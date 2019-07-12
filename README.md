@@ -1,24 +1,35 @@
-# README
+# Ruby Goof
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Open a terminal and open the `ruby-goof` directory.
 
-Things you may want to cover:
+1. Build the project
 
-* Ruby version
+   ```console
+   bundle install
+   ```
 
-* System dependencies
+2. Test the project
 
-* Configuration
+   ```console
+   snyk test --file=Gemfile.lock
+   ```
 
-* Database creation
+All-in-one to clone and run:
 
-* Database initialization
+```console
+git clone git@github.com:pstember/ruby-goof.git && \
+cd ruby-goof && \
+bundle install && \
+snyk test --file=Gemfile.lock
+```
 
-* How to run the test suite
+## Screenshots
 
-* Services (job queues, cache servers, search engines, etc.)
+All of these screenshots demonstrate the extra value provided when scanning a
+project using the Snyk CLI tool
 
-* Deployment instructions
+### Vulnerability detection
 
-* ...
+This screenshot shows vulnerabilities and potential remediation when such remediation exist
+
+![Vulnerability detection screenshot](screenshots/vulnerabilities.png "Vulnerability detection")

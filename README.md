@@ -1,14 +1,20 @@
 # Ruby Goof
 
+1. Open a terminal and clone the repository
+
+   ```console
+   git clone git@github.com:pstember/ruby-goof.git
+   ```
+
 Open a terminal and open the `ruby-goof` directory.
 
-1. Build the project
+2. Build the project
 
    ```console
    bundle install
    ```
 
-2. Test the project
+3. Test the project
 
    ```console
    snyk test --file=Gemfile.lock
@@ -33,3 +39,14 @@ project using the Snyk CLI tool
 This screenshot shows vulnerabilities and potential remediation when such remediation exist
 
 ![Vulnerability detection screenshot](screenshots/vulnerabilities-screen.png "Vulnerability detection")
+
+# Installing Ruby
+```console
+brew install rbenv
+rbenv init
+rbenv install 2.6.3
+rbenv rehash
+gem install bundler
+rbenv rehash
+```
+Don't forget to update your `.bashrc` or `.zshrc` to include `eval "$(rbenv init -)"`

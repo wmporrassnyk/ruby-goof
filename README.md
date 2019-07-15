@@ -25,7 +25,7 @@ snyk test --file=Gemfile.lock
 
 ## Screenshots
 
-All of these screenshots demonstrate the extra value provided when scanning a
+The following screenshot demonstrates the extra value provided when scanning a
 project using the Snyk CLI tool
 
 ### Vulnerability detection

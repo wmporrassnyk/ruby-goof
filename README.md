@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pstember/ruby-goof.svg?branch=master)](https://travis-ci.org/pstember/ruby-goof)
+
 # Ruby Goof
 
 1. Open a terminal and clone the repository

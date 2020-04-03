@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
+source 'https://private.rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.7.1'
 
 #introducing a vulnerability for snyk
 # gem 'easymon', '1.2.2'

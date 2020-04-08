@@ -14,21 +14,19 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
+        ref: ${{ github.event.pull_request.base }}
     - name: Set up Ruby 2.7.0
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.7.0
     - name: Build and test with Rake
       run: |
-        git checkout ${{ github.event.pull_request.base }}
         gem install bundler
         bundle install --jobs 4 --retry 3
     - name: Commit files
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Github action"
-        git pull
         git add Gemfile.lock
         git commit -m "Github action to update bundle" -a
         git push ${{ github.event.pull_request.base }}

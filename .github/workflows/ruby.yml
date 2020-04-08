@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@@v2.1.0
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
     - name: Set up Ruby 2.7.0
       uses: actions/setup-ruby@v1
       with:
@@ -25,9 +27,7 @@ jobs:
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Github action"
+        git pull
         git add Gemfile.lock
         git commit -m "Github action to update bundle" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        git push ${{ github.event.pull_request.base }}

@@ -12,15 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the project
-      run: |
-        git checkout ${{ github.event.pull_request.base }}
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
     - name: Set up Ruby 2.7.0
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.7.0
     - name: Build and test with Rake
       run: |
+        git checkout ${{ github.event.pull_request.base }}
         gem install bundler
         bundle install --jobs 4 --retry 3
     - name: Commit files

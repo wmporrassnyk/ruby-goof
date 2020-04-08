@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.pull_request.base }}
+    - name: Checkout the project
+      run: |
+        git checkout ${{ github.event.pull_request.base }}
     - name: Set up Ruby 2.7.0
       uses: actions/setup-ruby@v1
       with:

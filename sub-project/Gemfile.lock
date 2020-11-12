@@ -1,0 +1,168 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (6.0.3.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    ast (2.4.1)
+    aws-eventstream (1.1.0)
+    aws-partitions (1.391.0)
+    aws-sdk-applicationautoscaling (1.48.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-autoscaling (1.49.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-core (3.109.2)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sdk-ec2 (1.209.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-ecr (1.39.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-elasticloadbalancing (1.29.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-kms (1.39.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-lambda (1.52.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-rds (1.105.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.84.1)
+      aws-sdk-core (~> 3, >= 3.109.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.2.2)
+      aws-eventstream (~> 1, >= 1.0.2)
+    byebug (11.1.3)
+    coderay (1.1.3)
+    colorize (0.8.1)
+    concurrent-ruby (1.1.7)
+    dogapi (1.42.0)
+      multi_json
+    faraday (1.1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
+    faraday_middleware-aws-sigv4 (0.4.0)
+      aws-sigv4 (~> 1.0)
+      faraday (>= 0.15)
+    git (1.7.0)
+      rchardet (~> 1.8)
+    httparty (0.18.1)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
+    i18n (1.8.5)
+      concurrent-ruby (~> 1.0)
+    jmespath (1.4.0)
+    mail (2.7.1)
+      mini_mime (>= 0.1.1)
+    method_source (1.0.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2020.1104)
+    mini_mime (1.0.2)
+    minitest (5.14.2)
+    multi_json (1.15.0)
+    multi_xml (0.6.0)
+    multipart-post (2.1.1)
+    net-ssh (6.1.0)
+    octokit (4.19.0)
+      faraday (>= 0.9)
+      sawyer (~> 0.8.0, >= 0.5.3)
+    os (1.1.1)
+    parallel (1.20.0)
+    parser (2.7.2.0)
+      ast (~> 2.4.1)
+    power_assert (1.2.0)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    public_suffix (4.0.6)
+    rainbow (3.0.0)
+    rake (13.0.1)
+    rchardet (1.8.0)
+    rdoc (6.2.1)
+    redis (4.2.2)
+    regexp_parser (1.8.2)
+    rexml (3.2.4)
+    rubocop (1.3.0)
+      parallel (~> 1.10)
+      parser (>= 2.7.1.5)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8)
+      rexml
+      rubocop-ast (>= 1.1.1)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (1.1.1)
+      parser (>= 2.7.1.5)
+    rubocop-performance (1.8.1)
+      rubocop (>= 0.87.0)
+      rubocop-ast (>= 0.4.0)
+    ruby-progressbar (1.10.1)
+    ruby2_keywords (0.0.2)
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
+    test-unit (3.3.6)
+      power_assert
+    thread_safe (0.3.6)
+    tzinfo (1.2.8)
+      thread_safe (~> 0.1)
+    unicode-display_width (1.7.0)
+    zeitwerk (2.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  aws-sdk-applicationautoscaling
+  aws-sdk-autoscaling
+  aws-sdk-core
+  aws-sdk-ec2
+  aws-sdk-ecr
+  aws-sdk-elasticloadbalancing
+  aws-sdk-lambda
+  aws-sdk-rds
+  aws-sdk-s3
+  byebug
+  colorize
+  dogapi
+  faraday_middleware
+  faraday_middleware-aws-sigv4
+  git
+  httparty
+  mail
+  net-ssh
+  octokit
+  os
+  parallel
+  pry
+  rake
+  rdoc
+  redis
+  rubocop
+  rubocop-performance
+  test-unit
+
+RUBY VERSION
+   ruby 2.7.1p83
+
+BUNDLED WITH
+   2.1.4

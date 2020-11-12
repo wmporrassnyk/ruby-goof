@@ -1,0 +1,39 @@
+# frozen_string_literal: true
+# Checking if install_pre_commit_hook.rb exists to avoid requiring in Docker build. This is meant to be run local only
+pre_commit_hook_installer = 'scripts/git_hooks/install_pre_commit_hook'
+require_relative pre_commit_hook_installer if File.exist?("#{File.dirname(__FILE__)}/#{pre_commit_hook_installer}.rb")
+source 'https://rubygems.org'
+ruby '2.7.1'
+gem 'rake'
+gem 'activesupport'
+gem 'aws-sdk-applicationautoscaling'
+gem 'aws-sdk-autoscaling'
+gem 'aws-sdk-core'
+gem 'aws-sdk-ec2'
+gem 'aws-sdk-ecr'
+gem 'aws-sdk-elasticloadbalancing'
+gem 'aws-sdk-lambda'
+gem 'aws-sdk-rds'
+gem 'aws-sdk-s3'
+gem 'colorize'
+gem 'dogapi'
+gem 'faraday_middleware'
+gem 'faraday_middleware-aws-sigv4'
+gem 'httparty'
+gem 'mail'
+gem 'net-ssh'
+gem 'os'
+gem 'parallel'
+gem 'redis'
+group :test do
+  gem 'byebug'
+  gem 'git'
+  gem 'octokit'
+  gem 'pry'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'test-unit'
+end
+group :local do
+  gem 'rdoc'
+end

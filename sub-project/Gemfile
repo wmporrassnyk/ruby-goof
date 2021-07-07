@@ -28,7 +28,7 @@ gem 'redis'
 group :test do
   gem 'byebug'
   gem 'git'
-  gem 'octokit'
+  gem 'octokit', '>= 4.19.0'
   gem 'pry'
   gem 'rubocop'
   gem 'rubocop-performance'

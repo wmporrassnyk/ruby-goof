@@ -27,7 +27,7 @@ gem 'parallel'
 gem 'redis'
 group :test do
   gem 'byebug'
-  gem 'git'
+  gem 'git', '>= 1.11.0'
   gem 'octokit'
   gem 'pry'
   gem 'rubocop'
